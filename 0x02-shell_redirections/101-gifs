@@ -1,2 +1,1 @@
-#!/bin/bash
-find . -type f -name "*.git" | rev | cut -d "/" -f 1 |cut -d '.' 2- | rev | LC_AL sort -f
+find . -type f -iname '*.gif' -printf "%f\n" | rev | cut -f 2- -d '.' | rev | tr '[:upper:]' '[:lower:]' | sort -f | uniq
