@@ -1,0 +1,6 @@
+#!/bin/bash
+for var in $(env); do
+name=$(echo "$var" | awk -F '=' '{print $1}')
+    value=$(echo "$var" | awk -F '=' '{print $2}')
+echo "$name: $value"
+done
